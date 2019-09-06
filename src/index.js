@@ -175,15 +175,21 @@ class Home extends React.Component {
     return (
       <Fragment>
         {this.state.submissionForm ? (
-          <Fragment>
-            <SubmissionForm
-              player1={this.state.player1}
-              player2={this.state.player2}
-              player1Change={this.player1Change}
-              player2Change={this.player2Change}
-            />
-            <button onClick={this.playStart}>Start</button>
-          </Fragment>
+          <div class="container">
+            <div class="center">
+              <SubmissionForm
+                player1={this.state.player1}
+                player2={this.state.player2}
+                player1Change={this.player1Change}
+                player2Change={this.player2Change}
+              />
+              <div style={{ paddingTop: "15px", paddingLeft: "130px" }}>
+                <button onClick={this.playStart} className="btn btn-primary">
+                  Start
+                </button>
+              </div>
+            </div>
+          </div>
         ) : (
           <div>
             <PlayGame

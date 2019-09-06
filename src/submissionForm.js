@@ -5,19 +5,23 @@ class SubmissionForm extends React.Component {
     return (
       <Fragment>
         <form>
-          Player 1 Name :{" "}
-          <input
-            type="text"
-            value={this.props.player1}
-            onChange={this.props.player1Change}
-          />
+          <div className="pad">
+            Player 1 Name:{" "}
+            <input
+              type="text"
+              value={this.props.player1}
+              onChange={this.props.player1Change}
+            />
+          </div>
           <br />
-          Player 2 Name :{" "}
-          <input
-            type="text"
-            value={this.props.player2}
-            onChange={this.props.player2Change}
-          />
+          <div class="pad">
+            Player 2 Name:{" "}
+            <input
+              type="text"
+              value={this.props.player2}
+              onChange={this.props.player2Change}
+            />
+          </div>
         </form>
       </Fragment>
     );

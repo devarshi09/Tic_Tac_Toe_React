@@ -19,7 +19,14 @@ class PlayGame extends React.Component {
   render() {
     return (
       <Fragment>
-        {this.props.chance ? this.props.player1 : this.props.player2}'s turn
+        <div
+          style={{ paddingLeft: "50%", paddingTop: "10%", paddingBottom: "5%" }}
+        >
+          <div class="btn btn-success">
+            {this.props.chance ? this.props.player1 : this.props.player2}'s turn
+          </div>
+        </div>
+
         <br />
         <div className="grid-container">{this.showAll()}</div>
       </Fragment>

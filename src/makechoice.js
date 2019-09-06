@@ -4,21 +4,49 @@ const MakeChoice = props => {
   if (props.winner === "") {
     return (
       <Fragment>
-        <div>Game Drawn</div>
-        <button onClick={props.formSubmission}>Exit ?</button>
-        <br />
-        <button onClick={props.playAgain}>New Game ?</button>
+        <div
+          style={{ paddingLeft: "50%", paddingTop: "10%", paddingBottom: "5%" }}
+        >
+          <div class="btn btn-warning">
+            <div style={{ padding: "10px" }}>Game Drawn</div>
+            <div style={{ padding: "10px" }}>
+              <button class="btn btn-danger" onClick={props.formSubmission}>
+                Exit ?
+              </button>
+            </div>
+
+            <br />
+            <div>
+              <button class="btn btn-info" onClick={props.playAgain}>
+                New Game ?
+              </button>
+            </div>
+          </div>
+        </div>
       </Fragment>
     );
   } else {
     return (
       <Fragment>
-        <Fragment>
-          <div>{props.winner} Won !</div>
-          <button onClick={props.formSubmission}>Exit ?</button>
-          <br />
-          <button onClick={props.playAgain}>New Game ?</button>
-        </Fragment>
+        <div
+          style={{ paddingLeft: "50%", paddingTop: "10%", paddingBottom: "5%" }}
+        >
+          <div class="btn btn-warning">
+            <div style={{ padding: "10px" }}>{props.winner} Won !</div>
+            <div style={{ padding: "10px" }}>
+              <button class="btn btn-danger" onClick={props.formSubmission}>
+                Exit ?
+              </button>
+            </div>
+
+            <br />
+            <div>
+              <button class="btn btn-info" onClick={props.playAgain}>
+                New Game ?
+              </button>
+            </div>
+          </div>
+        </div>
       </Fragment>
     );
   }
